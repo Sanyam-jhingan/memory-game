@@ -75,7 +75,7 @@ const checkCards = (e) => {
         }
     }
     if (toggleCard.length === 16) {
-        restart("Congrats! you won!")
+        setTimeout(() => restart("Congrats! you won!"), 1000)
     }
 }
 
@@ -93,7 +93,7 @@ const restart = (text) => {
         cards[index].style.boxShadow = "rgba(0, 0, 0, 0.2) 0px 5px 15px"
         section.style.pointerEvents = "all"
     })
-    setTimeout(() => window.alert(text), 750)
+    setTimeout(() => window.alert(text), 100)
 }
 
 cardGenerator()
